@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "(server) Launch",
+        "type": "cppdbg",
+        "request": "launch",
+        "miDebuggerPath": "${workspaceFolder}/Tools/w64devkit/bin/gdb.exe",
+        "program": "${workspaceFolder}/Deployment/server.exe",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceRoot}/Deployment",
+        "preLaunchTask": "Build server"
+      },
+      {
+        "name": "(client) Launch",
+        "type": "cppdbg",
+        "request": "launch",
+        "miDebuggerPath": "${workspaceFolder}/Tools/w64devkit/bin/gdb.exe",
+        "program": "${workspaceFolder}/Deployment/client.exe",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceRoot}/Deployment",
+        "preLaunchTask": "Build client"
+      },
+      {
+        "name": "(nob) Launch",
+        "type": "cppvsdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/nob.exe",
+        "args": ["server"],
+        "stopAtEntry": true,
+        "cwd": "${workspaceRoot}",
+        "preLaunchTask": "Build nob"
+      }
+    ]
+        
+    
+}
